@@ -468,6 +468,7 @@ nav {
         margin-left: 0.94rem;
         position: relative;
         margin-top: 1.25rem;
+        padding-bottom: 2.69rem;
     }
 
     .right {
@@ -623,8 +624,8 @@ nav {
         background: #961A1A;
         filter: blur(196px);
         position: fixed;
-        left: -3.4rem;
-        top: 20.1rem;
+        left: 1.6rem;
+        top: 6.1rem;
 
     }
 
@@ -708,5 +709,6 @@ nav {
         background-repeat: no-repeat;
         background-size: cover;
         content: "";
+        display: block;
     }
 }
