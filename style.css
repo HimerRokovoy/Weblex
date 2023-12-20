@@ -10,7 +10,15 @@ body {
     width: 100%;
 }
 
-
+.noise{
+    display: none;
+}
+.glass{
+    display: none;
+}
+.yellowblur{
+    display: none;
+}
 .redball {
     fill: radial-gradient(82.3% 82.3% at 27.25% 26.5%, rgba(255, 208, 208, 0.54) 0%, rgba(212, 93, 93, 0.26) 59.67%, rgba(167, 49, 49, 0.25) 78.59%, rgba(130, 25, 25, 0.25) 100%);
     filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25));
@@ -18,7 +26,7 @@ body {
     width: 5.1875rem;
     height: 5.1875rem;
     flex-shrink: 0;
-    position: absolute;
+    position: fixed;
     top: 5.9rem;
     left: 32.4rem;
     background-image: url("./imgs/red\ ball.png");
@@ -37,7 +45,7 @@ body {
     background-image: url("./imgs/purple\ ball.png");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
+    position: fixed;
     top: -0.1rem;
     left: 54.3rem;
     border: none;
@@ -425,6 +433,7 @@ nav {
         width: 100%;
         padding-bottom: 3.75rem;
     }
+
     /* header{
         width: 100%;
         display: flex;
@@ -434,9 +443,8 @@ nav {
     .container_mb {
         display: flex;
         justify-content: space-around;
-        width: 100%;
-        height: 3.4375rem;
-
+        /* width: 100%; */
+        margin-top: 0;
     }
 
     .nav_item_mb>a {
@@ -458,8 +466,8 @@ nav {
         width: 100%;
         flex-direction: column;
         margin-left: 0.94rem;
-        
-        
+        position: relative;
+        margin-top: 1.25rem;
     }
 
     .right {
@@ -558,7 +566,7 @@ nav {
     }
 
     footer {
-        
+
         flex-shrink: 0;
         padding-left: 0.94rem;
     }
@@ -607,16 +615,16 @@ nav {
     }
 
     .redblur {
-        width: 13.1875rem;
-        height: 13.125rem;
+        width: 16.1875rem;
+        height: 16.1875rem;
         flex-shrink: 0;
-        border-radius: 13.1875rem;
+        border-radius: 16.1875rem;
         opacity: 0.5;
         background: #961A1A;
         filter: blur(196px);
         position: fixed;
-        left: -3.4;
-        top: 15.1rem;
+        left: -3.4rem;
+        top: 20.1rem;
 
     }
 
@@ -637,16 +645,66 @@ nav {
     .redball {
         fill: radial-gradient(82.3% 82.3% at 27.25% 26.5%, rgba(255, 208, 208, 0.54) 0%, rgba(212, 93, 93, 0.26) 59.67%, rgba(167, 49, 49, 0.25) 78.59%, rgba(130, 25, 25, 0.25) 100%);
         filter: drop-shadow(3px 6px 27px rgba(223, 125, 125, 0.25));
-        backdrop-filter: blur(2px);
+        /* backdrop-filter: blur(2px); */
         width: 2.6875rem;
         height: 2.6875rem;
         flex-shrink: 0;
         position: absolute;
-        top: 5.9rem;
-        left: 32.4rem;
+        top: 33.1rem;
+        left: 1.81rem;
         background-image: url("./imgs/red\ ball.png");
         background-repeat: no-repeat;
         background-size: contain;
+        z-index: -1;
 
+    }
+
+    .purpleball {
+        width: 2.5rem;
+        height: 2.5rem;
+        flex-shrink: 0;
+        fill: radial-gradient(82.3% 82.3% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.21) 78.59%, rgba(86, 24, 128, 0.23) 100%);
+        filter: drop-shadow(3px 6px 27px rgba(177, 118, 217, 0.25)) blur(5px);
+        backdrop-filter: blur(2px);
+        background-image: url("./imgs/purple\ ball2.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 24.8rem;
+        left: 27rem;
+        border: none;
+    }
+
+    .glass {
+        width: 100%;
+        height: 27.8125rem;
+        position: absolute;
+        top: 5.44rem;
+        z-index: -2;
+        flex-shrink: 0;
+        background: radial-gradient(304.35% 148.2% at 3.2% 3.49%, rgba(255, 246, 233, 0.10) 0%, rgba(26, 29, 35, 0.10) 26.62%, rgba(26, 29, 35, 0.10) 52.1%, rgba(26, 29, 35, 0.01) 70.17%, rgba(26, 29, 35, 0.00) 100%);
+        backdrop-filter: blur(7.5px);
+    }
+
+    .yellowblur {
+        width: 12.5rem;
+        height: 12.5rem;
+        flex-shrink: 0;
+        fill: #FCB045;
+        opacity: 0.4;
+        filter: blur(196px);
+        position: absolute;
+        top: 32.4rem;
+        left: -4.1rem;
+    }
+
+    .noise {
+        width: 100%;
+        height: 100%;
+        background: url('./imgs/noise.png'), lightgray 0% 0% / 100px 100px repeat;
+        mix-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: "";
     }
 }
